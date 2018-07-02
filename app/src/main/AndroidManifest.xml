@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mirella.notification">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ResultActivity" />
+
+        <receiver
+            android:name=".boadCast.NotifcationReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="MY_BROADCAST_STATIC" />
+                <category android:name="android.intent.category.Test" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".boadCast.BroadCastActivity" />
+
+        <service
+            android:name=".services.MyService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="MY_SERVICE" />
+                <category android:name="android.intent.category.Service" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".services.ServiceActivity"></activity>
+    </application>
+
+</manifest>
