@@ -1,4 +1,4 @@
-package com.example.mirella.notification.boadCast
+package com.example.mirella.notification.broadCast
 
 import android.content.BroadcastReceiver
 import android.content.Context

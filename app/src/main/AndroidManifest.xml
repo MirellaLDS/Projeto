@@ -23,16 +23,16 @@
         <activity android:name=".ResultActivity" />
 
         <receiver
-            android:name=".boadCast.NotifcationReceiver"
+            android:name=".broadCast.BroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="MY_BROADCAST_STATIC" />
-                <category android:name="android.intent.category.Test" />
+                <category android:name="com.example.mirella.notification.broadCast" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".boadCast.BroadCastActivity" />
+        <activity android:name=".broadCast.BroadCastActivity" />
 
         <service
             android:name=".services.MyService"
@@ -40,11 +40,13 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="MY_SERVICE" />
+
                 <category android:name="android.intent.category.Service" />
             </intent-filter>
         </service>
 
-        <activity android:name=".services.ServiceActivity"></activity>
+        <activity android:name=".services.ServiceActivity" />
+        <activity android:name=".broadCast.Main2Activity"></activity>
     </application>
 
 </manifest>

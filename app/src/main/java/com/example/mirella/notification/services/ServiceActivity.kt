@@ -20,5 +20,7 @@ class ServiceActivity : AppCompatActivity() {
             i.putExtra("KEY1", "Value to be used by the service")
             this.startService(i)
         }
+
+
     }
 }

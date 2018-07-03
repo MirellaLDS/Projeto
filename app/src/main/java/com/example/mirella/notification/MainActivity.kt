@@ -4,14 +4,17 @@ import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.graphics.BitmapFactory
 import android.media.RingtoneManager
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.mirella.notification.boadCast.BroadCastActivity
+import android.widget.Toast
+import com.example.mirella.notification.broadCast.BroadCastActivity
 import com.example.mirella.notification.services.ServiceActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val mNotificationId = 1000
 
         val context = this.applicationContext
-        var notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notifyIntent = Intent(this, ResultActivity::class.java)
 
         val title = "Sample Notification"
@@ -98,8 +101,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-
 
     companion object {
 
